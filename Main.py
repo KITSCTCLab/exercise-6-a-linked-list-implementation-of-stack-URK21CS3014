@@ -16,16 +16,8 @@ class Stack:
       newnode.next=self.head
       self.head=newnode
 
-  def isempty(self):
-		if self.head==None:
-			return True
-		else:
-			return False
-
-    
-
   def pop(self) :
-    if self.isempty():
+    if self.head==None
       return None
     else:
       poppednode = self.head
