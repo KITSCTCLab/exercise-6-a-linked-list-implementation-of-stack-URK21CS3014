@@ -8,7 +8,7 @@ class Stack:
   def __init__(self):
     self.head = None
 
-  def push(self, data) :
+  def push(self, data) -> None :
     if self.head==None:
       self.head=Node(data)
     else:
@@ -16,7 +16,7 @@ class Stack:
       newnode.next=self.head
       self.head=newnode
 
-  def pop(self) :
+  def pop(self) -> None :
     if self.head==None:
       return None
     else:
