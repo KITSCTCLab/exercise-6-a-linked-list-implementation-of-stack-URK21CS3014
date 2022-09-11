@@ -16,7 +16,7 @@ class Stack:
       newnode.next=self.head
       self.head=newnode
   def isempty(self):
-		return True if self.head == None else False
+	return True if self.head == None else False
 
     
 
