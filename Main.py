@@ -8,33 +8,33 @@ class Stack:
   def __init__(self):
     self.head = None
 
-  def push(self, data) -> None :
-    if self.head==None:
-      self.head=Node(data)
-    else:
-      newnode=Node(data)
-      newnode.next=self.head
-      self.head=newnode
+  def push(self, data) -> None:
+    # Write your code here
+    new_node = Node(data)
+    new_node.next = self.head
+    self.head = new_node
 
-  def pop(self) -> None :
-    if self.head==None:
-      return None
-    else:
-      poppednode = self.head
-      self.head = self.head.next
-      poppednode.next = None
-      return poppednode.data
+  def pop(self) -> None:
+    # Write your code here
+    if(self.head != None): 
+      temp = self.head
+      self.head = temp.next
+      temp.next = None
 
   def status(self):
     """
     It prints all the elements of stack.
     """
-    iternode=self.head
-    while(iternode != None):
- 
-          print(iternode.data, "->", end=" ")
-          iternode = iternode.next
-    return
+    # Write your code here 
+    if(self.head != None):
+      temp = self.head
+      while(temp.next != None):
+        print(temp.data, end = "=>")
+        temp = temp.next
+      else:
+        print(temp.data,"None", sep="=>")
+    else:
+      print("None")
 
 
 # Do not change the following code
@@ -50,3 +50,4 @@ for i in range(len(operations)):
   elif operations[i] == "pop":
     stack.pop()
 stack.status()
+ 
