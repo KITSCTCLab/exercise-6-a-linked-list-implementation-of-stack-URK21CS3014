@@ -17,7 +17,7 @@ class Stack:
       self.head=newnode
 
   def pop(self) :
-    if self.head==None
+    if self.head==None:
       return None
     else:
       poppednode = self.head
