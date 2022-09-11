@@ -15,13 +15,19 @@ class Stack:
       newnode=Node(data)
       newnode.next=self.head
       self.head=newnode
+  def isempty(self):
+		return True if self.head == None else False
+
     
 
   def pop(self) :
-    poppednode = self.head
-    self.head = self.head.next
-    poppednode.next = None
-    return poppednode.data
+    if self.isempty():
+      return None
+    else:
+      poppednode = self.head
+      self.head = self.head.next
+      poppednode.next = None
+      return poppednode.data
 
   def status(self):
     """
